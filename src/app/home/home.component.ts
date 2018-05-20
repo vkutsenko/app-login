@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User } from '../_models/user';
+import { User } from '@firebase/auth-types';
 import { AuthenticationService } from '../_services/authentication.service';
 
 @Component({
@@ -16,5 +16,9 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
 
+    }
+
+    logout() {
+        this.authService.logout();
     }
 }
